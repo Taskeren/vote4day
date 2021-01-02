@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
-group = pluginGroup
-version = pluginVersion
+group = "cn.taskeren.vote4day"
+version = "1.0"
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
