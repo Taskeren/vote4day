@@ -41,7 +41,7 @@ public class Vote4day extends JavaPlugin {
 		lang.addDefault(LANG_START_VOTING_2, "&7Type &6/vday &7to vote.");
 		lang.addDefault(LANG_PLAYER_VOTE_SUCCESS, "&e{PLAYER} &7voted! &6{PERCENT} ({VOTED}/{TOTAL})");
 		lang.addDefault(LANG_PLAYER_VOTE_DUPLICATED, "&7&oDon't duplicately vote!");
-		lang.addDefault(LANG_WORLD_VOTE_PASS, "&6&oRaise and Shine!");
+		lang.addDefault(LANG_WORLD_VOTE_PASS, "&6&oRise and Shine!");
 		lang.options().copyDefaults(true);
 		try {
 			lang.save(new File("./plugins/vote4day/language.yml"));
