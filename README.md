@@ -25,7 +25,7 @@ The configuration file is `./plugins/vote4day/config.yml`. You can change the `p
 The localization file is `./plugins/vote4day/language.yml`. You replace it with the one you get from someone that has been translated. You can also upload your translated file to the [Discussions/Localization](https://github.com/nitu2003/vote4day/discussions/categories/localization).
 
 And now we have 1 avaliable for you to download:
-- [简体中文(Simplified Chinese)](https://github.com/nitu2003/vote4day/discussions/2
+- [简体中文(Simplified Chinese)](https://github.com/nitu2003/vote4day/discussions/2)
 
 ## What about bugs?
 
