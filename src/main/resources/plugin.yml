@@ -1,0 +1,26 @@
+name: Vote4day
+main: cn.taskeren.vote4day.Vote4day
+version: 1.0
+author: Taskeren
+website: https://github.com/nitu2003/vote4day
+description: The plugin to vote for the day.
+api-version: 1.16
+
+commands:
+  vday:
+    aliases:
+      - vd
+      - voteday
+    description: Vote for Day
+    usage: /vday
+    permission: vote4day.use
+    permission-message: You don't have permission.
+
+permissions:
+  vote4day.*:
+    description: Gives access to all Vote4day commands.
+    children:
+      vote4day.use: true
+  vote4day.use:
+    description: Allows you to execute Vote4day command.
+    default: true
