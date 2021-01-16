@@ -20,6 +20,8 @@ public class Vote4day extends JavaPlugin {
 	static final String LANG_PLAYER_VOTE_SUCCESS = "vote.player-vote.success";
 	static final String LANG_PLAYER_VOTE_DUPLICATED = "vote.player-vote.duplicated";
 	static final String LANG_WORLD_VOTE_PASS = "vote.world-vote-pass";
+	static final String LANG_PLAYER_UNVOTE_SUCCESS = "vote.player-unvote.success";
+	static final String LANG_PLAYER_UNVOTE_MISSING = "vote.player-unvote.missing";
 
 	@Override
 	public void onLoad() {
@@ -42,6 +44,8 @@ public class Vote4day extends JavaPlugin {
 		lang.addDefault(LANG_PLAYER_VOTE_SUCCESS, "&e{PLAYER} &7voted! &6{PERCENT} ({VOTED}/{TOTAL})");
 		lang.addDefault(LANG_PLAYER_VOTE_DUPLICATED, "&7&oDon't duplicately vote!");
 		lang.addDefault(LANG_WORLD_VOTE_PASS, "&6&oRise and Shine!");
+		lang.addDefault(LANG_PLAYER_UNVOTE_SUCCESS, "&e{PLAYER} &7unvoted! &6{PERCENT} ({VOTED}/{TOTAL})");
+		lang.addDefault(LANG_PLAYER_UNVOTE_MISSING, "&7&oYou didn't vote.");
 		lang.options().copyDefaults(true);
 		try {
 			lang.save(new File("./plugins/vote4day/language.yml"));
@@ -50,8 +54,12 @@ public class Vote4day extends JavaPlugin {
 			e.printStackTrace();
 		}
 
+		new TimeoutThread().start();
+
 		//noinspection ConstantConditions
 		this.getServer().getPluginCommand("vday").setExecutor(new CommandVote(this));
+		//noinspection ConstantConditions
+		this.getServer().getPluginCommand("unvday").setExecutor(new CommandUnvote(this));
 	}
 
 	@Override

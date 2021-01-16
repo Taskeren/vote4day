@@ -15,12 +15,24 @@ commands:
     usage: /vday
     permission: vote4day.use
     permission-message: You don't have permission.
+  unvday:
+    aliases:
+      - uvd
+      - unvoteday
+    description: Unvote for Day
+    usage: /unvday
+    permission: vote4day.use-unvote
+    permission-message: You don't have permission.
 
 permissions:
   vote4day.*:
     description: Gives access to all Vote4day commands.
     children:
       vote4day.use: true
+      vote4day.use-unvote: true
   vote4day.use:
+    description: Allows you to execute Vote4day command.
+    default: true
+  vote4day.use-unvote:
     description: Allows you to execute Vote4day command.
     default: true
