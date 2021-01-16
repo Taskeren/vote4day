@@ -66,7 +66,7 @@ public class VoteTicket {
 		}
 		else {
 			String str = instance.lang.getString(LANG_PLAYER_VOTE_DUPLICATED);
-			broadcast(str);
+			sender.sendMessage(str);
 		}
 		return r;
 	}
